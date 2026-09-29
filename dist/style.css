@@ -14,3 +14,22 @@
 .camera-stage+.camera-controls button{min-width:0;padding:11px 5px;font-size:14px}
 /* Prevent browser scroll anchoring from shifting the modal when feeds switch. */
 dialog,.camera-stage{overflow-anchor:none}
+
+/* A fixed, viewport-sized camera console: only the image changes. */
+html{scrollbar-gutter:stable}
+body:has(#demo-dialog[open]){overflow:hidden}
+#demo-dialog.camera-dialog[open]{display:grid;grid-template-rows:auto auto minmax(0,1fr) auto;gap:12px;width:min(760px,calc(100vw - 24px));height:min(620px,calc(100dvh - 24px));max-height:none;padding:24px;margin:auto;overflow:hidden;box-sizing:border-box}
+.camera-dialog>.eyebrow{display:none}
+#demo-dialog.camera-dialog h2{font-size:32px;line-height:1.1;margin:0;padding-right:36px;letter-spacing:-.5px}
+.camera-dialog .close-dialog{top:12px;right:12px;width:40px;height:40px;display:grid;place-items:center;line-height:1;z-index:2}
+#demo-dialog.camera-dialog>.dialog-note{margin:0;font-size:12px;line-height:1.4}
+#demo-dialog.camera-dialog #demo-content{min-height:0;margin:0;display:grid;grid-template-rows:minmax(0,1fr) auto;gap:12px}
+.camera-dialog #demo-content>.route-state{display:none}
+.camera-dialog .camera-stage{height:100%;min-height:0;aspect-ratio:auto;container-type:size}
+.camera-dialog .camera-feed{flex:none;width:min(50cqw,calc(100cqh * 427 / 324))}
+.camera-dialog .camera-stage:not([data-camera-view="both"]) .camera-feed{flex:none;width:min(100cqw,calc(100cqh * 427 / 324))}
+.camera-dialog .camera-stage+.camera-controls{margin:0}
+.camera-dialog .camera-controls button{min-height:44px}
+#demo-dialog.camera-dialog>.button{min-height:44px;padding:12px 20px;justify-content:center;transform:none}
+@media(max-width:480px){#demo-dialog.camera-dialog[open]{padding:16px;gap:10px;height:min(550px,calc(100dvh - 24px))}#demo-dialog.camera-dialog h2{font-size:26px}.camera-dialog .close-dialog{top:7px;right:7px}}
+@media(max-height:420px){#demo-dialog.camera-dialog[open]{padding:12px 18px;gap:6px}#demo-dialog.camera-dialog h2{font-size:24px}.camera-dialog #demo-content{gap:6px!important}.camera-dialog .camera-controls button{padding:7px 5px;min-height:36px}#demo-dialog.camera-dialog>.button{padding:8px 16px;min-height:36px}}

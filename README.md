@@ -46,6 +46,14 @@ python verify.py
 
 ## Publicar
 
+### Vercel
+
+Importa este repositorio y usa la raíz del repositorio como **Root Directory** (sin seleccionar `dist`). El archivo `vercel.json` configura el proyecto como sitio estático, omite instalación y compilación, y publica la carpeta `dist`.
+
+Si el proyecto ya existe en Vercel, verifica que **Root Directory** esté vacío o sea `.` y despliega el último commit de `main`. No selecciones un framework como Next.js ni agregues un comando `npm run build`: esta landing no necesita compilación.
+
+### Otros proveedores
+
 Sube el contenido de `dist` a un alojamiento estático, o configura `dist` como directorio de publicación. No se requiere comando de compilación.
 
 Los productos y fotografías provienen de los catálogos proporcionados por RT Mobile. Los precios se omitieron porque los materiales de referencia muestran planes diferentes; confirma tarifas vigentes antes de agregarlas.

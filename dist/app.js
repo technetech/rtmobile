@@ -3,9 +3,10 @@ const products=[
 {name:'GPS profesional',cat:'fleet',label:'FLOTAS + TELEMETRÍA',img:'products0-2.png',desc:'Detector de jammer y compatibilidad con sensores para tu operación.'},
 {name:'Rastreador solar',cat:'asset',label:'ACTIVOS',img:'products0-3.png',desc:'Energía solar, batería de larga duración y protección IP67.'},
 {name:'GPS portátil',cat:'asset',label:'SEGURIDAD EN MOVIMIENTO',img:'products0-4.png',desc:'Ubicación en tiempo real y botón de pánico en un equipo portátil.'},
-{name:'Guardian Watch',cat:'asset',label:'PERSONAS',img:'products0-5.jpg',desc:'Ubicación en tiempo real, llamada SOS y llamadas entrantes y salientes.'},
+{name:'Guardian Watch',cat:'asset',label:'PERSONAS',img:'guardian-watch-transparent.png',desc:'Ubicación en tiempo real, llamada SOS y llamadas entrantes y salientes.'},
 {name:'OBD II',cat:'fleet',label:'DATOS DEL VEHÍCULO',img:'products0-7.png',desc:'Rastreo en tiempo real y lectura de datos CANBUS.'},
-{name:'RT Tracker App',cat:'fleet',label:'TRABAJO DE CAMPO',img:null,desc:'Formularios, ubicación, botón de pánico y envío de fotos, audio y video.'}
+{name:'RT Tracker App',cat:'fleet',label:'TRABAJO DE CAMPO',img:null,desc:'Formularios, ubicación, botón de pánico y envío de fotos, audio y video.'},
+{name:'Portal Staff',cat:'fleet',label:'GESTIÓN DE PERSONAL',img:'portal-staff-original-colors.png',desc:'Portal Staff es un portal para empleados que ayuda a las empresas a llevar el control de asistencia y centralizar información, documentos y recursos del personal en un solo lugar.'}
 ];
 const grid=document.querySelector('#product-grid');
 function renderProducts(filter='all'){grid.innerHTML=products.filter(p=>filter==='all'||p.cat===filter).map(p=>`<article class="product-card"><span class="product-category">${p.label}</span><div class="product-image">${p.img?`<img src="assets/${p.img}" alt="${p.name}" loading="lazy">`:'<span class="app-mark" aria-hidden="true">RT<span style="font-size:25px;letter-spacing:-1px">app</span></span>'}</div><h3>${p.name}</h3><p>${p.desc}</p><a target="_blank" rel="noopener" href="https://wa.me/528116038103?text=${encodeURIComponent('Hola, me interesa '+p.name+' de RT Mobile')}">Cotizar equipo <span>↗</span></a></article>`).join('')}

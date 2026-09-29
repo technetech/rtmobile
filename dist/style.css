@@ -33,3 +33,6 @@ body:has(#demo-dialog[open]){overflow:hidden}
 #demo-dialog.camera-dialog>.button{min-height:44px;padding:12px 20px;justify-content:center;transform:none}
 @media(max-width:480px){#demo-dialog.camera-dialog[open]{padding:16px;gap:10px;height:min(550px,calc(100dvh - 24px))}#demo-dialog.camera-dialog h2{font-size:26px}.camera-dialog .close-dialog{top:7px;right:7px}}
 @media(max-height:420px){#demo-dialog.camera-dialog[open]{padding:12px 18px;gap:6px}#demo-dialog.camera-dialog h2{font-size:24px}.camera-dialog #demo-content{gap:6px!important}.camera-dialog .camera-controls button{padding:7px 5px;min-height:36px}#demo-dialog.camera-dialog>.button{padding:8px 16px;min-height:36px}}
+
+
+
